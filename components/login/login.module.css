@@ -1,0 +1,40 @@
+
+
+.login {
+    max-width: 660pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 66pt;
+    padding: 44pt;
+    border-radius: 11pt;
+    background-color: rgba(203, 253, 255, 0.44);
+    box-shadow: 0pt 3pt 9pt rgba(0, 0, 0, 0.22);
+}
+
+.login__labelCol {
+    text-align: right;
+}
+
+.login__inputCol {
+    text-align: left;
+}
+
+.login__submitCol {
+    text-align: center;
+}
+
+.login__label {
+    vertical-align: middle;
+    margin-top: 11pt;
+    margin-bottom: 11pt;
+}
+
+.login__input {
+    vertical-align: middle;
+    margin-top: 11pt;
+    margin-bottom: 11pt;
+}
+
+.login__submit {
+    margin: 11pt;
+}
