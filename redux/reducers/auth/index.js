@@ -1,3 +1,4 @@
+import AUTH_ACTION_TYPE from '../../actionTypes/auth'
 
 
 export const AUTH_STATE = {
@@ -9,13 +10,12 @@ export const AUTH_STATE = {
     LOGGED_IN: "LOGGED_IN"
 }
 
-
-const initialState = {
+export const initialAuthState = {
     authState: AUTH_STATE.INITIAL,
     adminId: null
 }
 
-const Auth = (state=initialState, action) => {
+const Auth = (state=initialAuthState, action) => {
     switch (action.type) {
         case AUTH_ACTION_TYPE.CHECK_COOKIE:
             return {
@@ -23,10 +23,10 @@ const Auth = (state=initialState, action) => {
                 authState: AUTH_STATE.CHECKING_COOKIE
             }
         case AUTH_ACTION_TYPE.COOKIE_VALID:
-            const { adminId } = action.payload
+            const { cookieAdminId } = action.payload
             return {
                 ...state,
-                adminId,
+                adminId: cookieAdminId,
                 authState: AUTH_STATE.LOGGED_IN
             }
         case AUTH_ACTION_TYPE.COOKIE_INVALID:
@@ -41,10 +41,10 @@ const Auth = (state=initialState, action) => {
                 authState: AUTH_STATE.LOGGING_IN
             }
         case AUTH_ACTION_TYPE.LOGIN_VALID:
-            const { adminId } = action.payload
+            const { loginAdminId } = action.payload
             return {
                 ...state,
-                adminId,
+                adminId: loginAdminId,
                 authState: AUTH_STATE.LOGGED_IN
             }
         case AUTH_ACTION_TYPE.LOGIN_INVALID:
