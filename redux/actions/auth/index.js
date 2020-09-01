@@ -1,4 +1,4 @@
-import AUTH_ACTION_TYPE from '../actionTypes'
+import AUTH_ACTION_TYPE from '../../actionTypes/auth'
 
 const checkCookie = () => ({
     type: AUTH_ACTION_TYPE.CHECK_COOKIE,

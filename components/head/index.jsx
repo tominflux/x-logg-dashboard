@@ -9,14 +9,24 @@ const DashboardHead = () => {
     const router = useRouter()
     const authState = useSelector(state => state.Auth.authState)
     //Effects
+    // - Login Redirect
     React.useEffect(() => {
-        const shouldRedirect = (
+        const redirectToLogin = (
             router.pathname !== "/login" &&
             authState !== AUTH_STATE.LOGGED_IN
         )
-        if (shouldRedirect) {
+        const redirectToHome = (
+            router.pathname === "/login" &&
+            authState === AUTH_STATE.LOGGED_IN
+        )
+        if (redirectToLogin) {
             router.push("/login")
         }
+        /*
+        if (redirectToHome) {
+            router.push("/")
+        }
+        */
     })
     //Render
     return (<>
