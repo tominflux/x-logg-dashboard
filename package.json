@@ -28,6 +28,7 @@
     "@x-logg/userlogg-express-rest": "^0.1.0",
     "@x-logg/userlogg-mongo": "^0.1.1",
     "actionlogg": "^0.1.1",
+    "axios": "^0.20.0",
     "catalogg": "^0.1.5",
     "express": "^4.17.1",
     "next": "^9.5.2",

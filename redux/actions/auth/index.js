@@ -30,6 +30,11 @@ const loginInvalid = () => ({
     payload: {}
 })
 
+const logout = () => ({
+    type: AUTH_ACTION_TYPE.COOKIE_INVALID,
+    payload: {}
+})
+
 
 ///////////////
 ///////////////
@@ -41,7 +46,8 @@ const AUTH_ACTIONS = {
     cookieInvalid,
     login,
     loginValid,
-    loginInvalid
+    loginInvalid,
+    logout
 }
 
 export default AUTH_ACTIONS

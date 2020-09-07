@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import { AUTH_STATE } from '../../redux/reducers/auth'
 import styles from './head.module.css'
+import Logout from './logout'
 
 const DashboardHead = () => {
     //Hooks
@@ -20,13 +21,13 @@ const DashboardHead = () => {
             authState === AUTH_STATE.LOGGED_IN
         )
         if (redirectToLogin) {
+            console.log("Redirect to login")
             router.push("/login")
         }
-        /*
         if (redirectToHome) {
+            console.log("Redirect to home")
             router.push("/")
         }
-        */
     })
     //Render
     return (<>
@@ -57,9 +58,7 @@ const DashboardHead = () => {
                     </span>
                 </div>
                 <div className="col-md-3 text-center">
-                    <span className={styles.header__logout}>
-                        [Log-Out]
-                    </span>
+                    <Logout />
                 </div>
             </div>
         </header>
