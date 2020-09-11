@@ -1,0 +1,15 @@
+
+
+.x-summary__row {
+    padding: 8.8pt 0pt;
+}
+
+.x-summary__left-col {
+    text-align: right;
+    padding-right: 15pt;
+}
+
+.x-summary__right-col {
+    text-align: left;
+    padding-left: 15pt;
+}

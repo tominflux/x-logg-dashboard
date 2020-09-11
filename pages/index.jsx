@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import DashSummary from "../components/dashSummary"
 import DashboardHead from "../components/head"
 import { AUTH_STATE } from "../redux/reducers/auth"
 
@@ -8,9 +9,7 @@ const HomePage = () => {
     //Getters
     const getDashSummary = () => (
         <section>
-            <h1>
-                Hello World
-            </h1>
+            <DashSummary />
         </section>
     )
     const getLoadingDisplay = () => (

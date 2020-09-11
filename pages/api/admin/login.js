@@ -4,12 +4,6 @@ import { adminCookieName } from '../../../misc/cookie'
 const api = generateApi()
 
 
-/*
- * TODO:
- * Cookie handling withing API Gateway.
- * Extract JWT and put in bearer token bound for 
- * X-logg API. 
- */
 export default async (req, res) => {
     switch (req.method) {
         case "GET":

@@ -1,0 +1,14 @@
+
+.x-summary {
+    padding: 11pt;
+    height: 244pt;
+    border: 1pt solid black;
+    border-radius: 11pt;
+    font-size: 16pt;
+}
+
+.x-summary__inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
