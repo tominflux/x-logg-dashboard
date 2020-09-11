@@ -9,23 +9,33 @@ const DashboardHead = () => {
     //Hooks
     const router = useRouter()
     const authState = useSelector(state => state.Auth.authState)
+    //Getters
+    const isAtLogin = () => (router.pathname === "/login")
+    const isAuthed = () => (
+        authState === "LOGGED_IN"
+    )
+    const possiblyAuthed = () => (
+        authState === "INITIAL" ||
+        authState === "CHECKING_COOKIE" ||
+        authState === "LOGGING_IN"
+    )
     //Effects
     // - Login Redirect
     React.useEffect(() => {
         const redirectToLogin = (
-            router.pathname !== "/login" &&
-            authState !== AUTH_STATE.LOGGED_IN
+            !isAtLogin() && 
+            (
+                !isAuthed() &&
+                !possiblyAuthed()
+            )
         )
         const redirectToHome = (
-            router.pathname === "/login" &&
-            authState === AUTH_STATE.LOGGED_IN
+            isAtLogin() && isAuthed()
         )
         if (redirectToLogin) {
-            console.log("Redirect to login")
             router.push("/login")
         }
         if (redirectToHome) {
-            console.log("Redirect to home")
             router.push("/")
         }
     })

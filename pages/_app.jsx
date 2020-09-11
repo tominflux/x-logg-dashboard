@@ -1,4 +1,6 @@
 import { Provider } from 'react-redux'
+import AuthCheck from '../components/authCheck'
+import AppContainer from '../components/appContainer'
 import { useStore } from '../redux/store'
 
 const DashboardApp = ({Component, pageProps}) => {
@@ -6,7 +8,10 @@ const DashboardApp = ({Component, pageProps}) => {
     //Render
     return (
         <Provider store={store}>
-            <Component {...pageProps} />
+            <AuthCheck />
+            <AppContainer>
+                <Component {...pageProps} />
+            </AppContainer>
         </Provider>
     )
 }
