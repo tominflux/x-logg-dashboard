@@ -1,7 +1,7 @@
-const { default: XSummary } = require("../xSummary")
+import XSummary from '../xSummary'
 import { PeopleFill, KeyFill } from "react-bootstrap-icons"
 
-const UserloggSummary = (props) => {
+const UserloggSummary = () => {
     //State
     const [adminCount, setAdminCount] = React.useState(null)
     const [userCount, setUserCount] = React.useState(null)

@@ -11,7 +11,7 @@ const forwardGet = async (req, res) => {
         }
     }
     const response = await api.get(
-        "api/userlog/stats/user",
+        "api/catalogg/stats/item",
         options
     )
     res.json(response.data)

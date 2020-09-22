@@ -1,6 +1,7 @@
-const { default: UserloggSummary } = require("./userloggSummary")
+import UserloggSummary from './userloggSummary'
+import CataloggSummary from './cataloggSummary'
 
-const DashSummary = (props) => {
+const DashSummary = () => {
     //Render
     return (
         <div className="container dash-summary">
@@ -9,7 +10,7 @@ const DashSummary = (props) => {
                     <UserloggSummary />
                 </div>
                 <div className="col-md-4">
-
+                    <CataloggSummary />
                 </div>
                 <div className="col-md-4">
 

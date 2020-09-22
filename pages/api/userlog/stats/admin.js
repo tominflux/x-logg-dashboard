@@ -1,4 +1,4 @@
-const { default: generateApi, attemptForward, getAuthHeader } = require("../../../../misc/api");
+import generateApi, { attemptForward, getAuthHeader } from '../../../../misc/api'
 
 
 const api = generateApi()
