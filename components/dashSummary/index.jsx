@@ -1,3 +1,4 @@
+import React from 'react'
 import UserloggSummary from './userloggSummary'
 import CataloggSummary from './cataloggSummary'
 

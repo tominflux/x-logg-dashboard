@@ -1,4 +1,5 @@
-const { default: AUTH_ACTIONS } = require("../../../redux/actions/auth")
+import React from 'react'
+import AUTH_ACTIONS from '../../../redux/actions/auth'
 import { useDispatch } from 'react-redux'
 import styles from './logout.module.css'
 

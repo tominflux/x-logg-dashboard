@@ -1,3 +1,4 @@
+import React from 'react'
 import XSummary from '../xSummary'
 import { BookFill, GridFill, SquareFill } from "react-bootstrap-icons"
 

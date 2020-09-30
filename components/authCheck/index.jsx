@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import AUTH_ACTIONS from '../../redux/actions/auth'
 
-const AuthCheck = (props) => {
+const AuthCheck = () => {
     //Hooks
     const dispatch = useDispatch()
     //Effects

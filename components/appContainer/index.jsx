@@ -1,3 +1,4 @@
+import React from 'react'
 import { AUTH_STATE } from "../../redux/reducers/auth"
 import Loading from "./loading"
 const { useSelector } = require("react-redux")

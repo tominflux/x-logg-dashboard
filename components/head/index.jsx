@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import React from 'react'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import styles from './head.module.css'

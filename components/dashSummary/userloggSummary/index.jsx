@@ -1,3 +1,4 @@
+import React from 'react'
 import XSummary from '../xSummary'
 import { PeopleFill, KeyFill } from "react-bootstrap-icons"
 
