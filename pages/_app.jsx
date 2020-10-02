@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import AuthCheck from '../components/authCheck'
 import AppContainer from '../components/appContainer'
@@ -26,6 +28,11 @@ const DashboardApp = ({Component, pageProps}) => {
             </AppContainer>
         </Provider>
     )
+}
+
+DashboardApp.propTypes = {
+    Component: PropTypes.node,
+    pageProps: PropTypes.object
 }
 
 export default DashboardApp
