@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { AUTH_STATE } from "../../redux/reducers/auth"
 import DashboardHead from '../head'
 import Loading from "./loading"
-const { useSelector } = require("react-redux")
+import { useSelector } from 'react-redux'
 
 
 const AppContainer = ({ children }) => {
