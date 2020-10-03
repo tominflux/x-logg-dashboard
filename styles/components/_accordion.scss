@@ -1,0 +1,17 @@
+
+
+
+/////////////
+//   ROOT  //
+/////////////
+
+.x-accord {
+    @extend .x-glass;
+    margin: 9pt 0;
+}
+
+.x-accord__header {
+    background-color: unset;
+    @extend .x-glass--int;
+    border: 0;
+}

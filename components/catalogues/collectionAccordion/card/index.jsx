@@ -4,14 +4,22 @@ import { conClass } from '../../../../misc/className'
 
 const CollectionAccordionCard = ({ collectionName, show }) => {
     //Computations
+    const cardClassName = conClass(
+        "card",
+        "x-accord"
+    )
+    const headerClassName = conClass(
+        "card-header",
+        "x-accord__header"
+    )
     const collapseClassName = conClass(
         "collapse",
         show ? "show" : null
     )
     //Render
     return (
-        <div className="card">
-            <div className="card-header" id="headingOne">
+        <div className={cardClassName}>
+            <div className={headerClassName}>
                 <h5 className="mb-0">
                     <button className="btn btn-link">
                         {collectionName}
