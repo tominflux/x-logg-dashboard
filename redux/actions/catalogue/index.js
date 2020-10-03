@@ -6,6 +6,11 @@ const fetchCatalogueNames = () => ({
     payload: {}
 })
 
+const fetchCatalogueNamesFailed = (fetchError) => ({
+    type: CATALOGUE_ACTION_TYPE.FETCH_CATALOGUE_NAMES_FAILED,
+    payload: { fetchError }
+})
+
 const receiveCatalogueNames = (catalogueNames) => ({
     type: CATALOGUE_ACTION_TYPE.RECEIVE_CATALOGUE_NAMES,
     payload: { catalogueNames }
@@ -23,6 +28,7 @@ const selectCatalogue = (catalogueName) => ({
 
 const CATALOGUE_ACTIONS = {
     fetchCatalogueNames,
+    fetchCatalogueNamesFailed,
     receiveCatalogueNames,
     selectCatalogue
 }

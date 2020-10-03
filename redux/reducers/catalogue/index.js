@@ -2,6 +2,7 @@ import CATALOGUE_ACTION_TYPE from "../../actionTypes/catalogue"
 
 export const initialCatalogueState = {
     fetchingCatalogueNames: false,
+    fetchError: null,
     catalogueNames: null,
     selectedCatalogueName: null,
 }
@@ -12,6 +13,14 @@ const Catalogue = (state = initialCatalogueState, action) => {
             return {
                 ...state,
                 fetchingCatalogueNames: true
+            }
+        }
+        case CATALOGUE_ACTION_TYPE.FETCH_CATALOGUE_NAMES_FAILED: {
+            const { fetchError } = action.payload
+            return {
+                ...state,
+                fetchingCatalogueNames: false,
+                fetchError
             }
         }
         case CATALOGUE_ACTION_TYPE.RECEIVE_CATALOGUE_NAMES: {
