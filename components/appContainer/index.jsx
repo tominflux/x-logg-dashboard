@@ -23,7 +23,9 @@ const AppContainer = ({ children }) => {
     return (
         <>
             <DashboardHead />
-            {getBody()}
+            <section>
+                {getBody()}
+            </section>
         </>
     )
 }

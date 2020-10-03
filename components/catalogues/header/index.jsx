@@ -9,7 +9,7 @@ import CATALOGUE_ACTIONS from '../../../redux/actions/catalogue'
 const CataloguesHeader = () => {
     //Hooks
     const {
-        //fetchingCatalogueNames,
+        fetchingCatalogueNames,
         catalogueNames,
         //selectedCatalogueName
     } = useSelector(state => state.Catalogue)
@@ -19,9 +19,12 @@ const CataloguesHeader = () => {
     React.useEffect(() => {
         const retrieveCatalogueNames = async () => {
             try {
-                const catalogueNames = await getCatalogues()
+                const fetchCatalogueNames =
+                    CATALOGUE_ACTIONS.fetchCatalogueNames()
+                dispatch(fetchCatalogueNames)
+                const receivedCatalogueNames = await getCatalogues()
                 const receiveCatalogueNames =
-                    CATALOGUE_ACTIONS.receiveCatalogueNames(catalogueNames)
+                    CATALOGUE_ACTIONS.receiveCatalogueNames(receivedCatalogueNames)
                 dispatch(receiveCatalogueNames)
             } catch (err) {
                 const fetchCatalogueNamesFailed =
@@ -29,22 +32,22 @@ const CataloguesHeader = () => {
                 dispatch(fetchCatalogueNamesFailed)
             }
         }
-        if (catalogueNames === null) {
+        if (catalogueNames === null && !fetchingCatalogueNames) {
             retrieveCatalogueNames()
         }
     })
     //Render
     return (
-        <div className="container-fluid">
+        <header className="container-fluid mb-5">
             <div className="row">
-                <div className="col-7 text-center">
+                <nav className="col-7 text-center">
                     <CataloguePicker />
-                </div>
+                </nav>
                 <div className="col-5">
                     <DeleteCatalogue />
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

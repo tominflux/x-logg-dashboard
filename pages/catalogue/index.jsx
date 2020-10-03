@@ -1,4 +1,5 @@
 import React from 'react'
+import CollectionAccordion from '../../components/catalogues/collectionAccordion'
 import CatalogueHeader from '../../components/catalogues/header'
 
 const CataloguesPage = () => {
@@ -6,9 +7,7 @@ const CataloguesPage = () => {
     return (
         <>
             <CatalogueHeader />
-            <section>
-
-            </section>
+            <CollectionAccordion />
         </>
     )
 }
