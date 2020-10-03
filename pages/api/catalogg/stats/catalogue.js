@@ -1,8 +1,8 @@
 import generateApi, { attemptForward, getAuthHeader } from '../../../../misc/api'
 
-
 const api = generateApi()
 
+const CATALOGG_STATS_URL = "api/catalogg/stats/catalogue"
 
 const forwardGet = async (req, res) => {
     const options = {
@@ -10,13 +10,9 @@ const forwardGet = async (req, res) => {
             ...getAuthHeader(req)
         }
     }
-    const response = await api.get(
-        "api/catalogg/stats/catalogue",
-        options
-    )
+    const response = await api.get(CATALOGG_STATS_URL, options)
     res.json(response.data)
 }
-
 
 export default async (req, res) => {
     switch (req.method) {
