@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import XSummary from '../xSummary'
 import { BookFill, GridFill, SquareFill } from "react-bootstrap-icons"
 
@@ -71,7 +72,11 @@ const CataloggSummary = () => {
     }
     //Render
     return (
-        <XSummary rows={ getRows() }/>
+        <Link href="/catalogue">
+            <a>
+                <XSummary rows={getRows()} />
+            </a>
+        </Link>
     )
 }
 
