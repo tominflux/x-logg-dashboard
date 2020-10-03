@@ -1,0 +1,39 @@
+
+
+
+/////////////
+//   ROOT  //
+/////////////
+
+.x-dropdown {
+    display: inline-block;
+}
+
+
+
+/////////////
+//   MENU  //
+/////////////
+
+.x-dropdown-menu {
+    border-radius: 0pt 0pt 6pt 6pt;
+    box-shadow: 
+        0 1.3pt 2.3pt rgba($primary-xdark, 0.5),    
+        0 1.3pt 1.6pt rgba($primary-dark, 0.2) inset,
+        0 -0.9pt 1.9pt rgba($primary-dark, 0.3) inset;  
+    text-shadow: 0 0.3pt 1.3pt rgba(0, 0, 0, 0.3);
+}
+
+
+
+/////////////
+//   ITEM  //
+/////////////
+
+.x-dropdown-item {
+    color: rgba($primary-xdark, 0.66);
+}
+.x-dropdown-item:hover {
+    color: rgb(0, 0, 0, 0.8);
+    background-color: rgba($primary, 1.0);
+}

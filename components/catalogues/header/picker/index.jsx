@@ -24,19 +24,28 @@ const CataloguesPicker = () => {
         dispatch(selectCatalogue)
     }
     //Computations
-    const pickerClassName = conClass("dropdown", styles["catalogue-picker"])
+    const pickerClassName = conClass(
+        "dropdown",
+        "x-dropdown",
+        styles.root
+    )
     const buttonClassName = conClass(
         "btn",
         "x-btn",
         "x-btn-primary",
+        isOpen ? "x-btn--flat-bottom" : null,
         "dropdown-toggle",
-        styles["catalogue-picker__btn"],
-        isOpen ? styles["catalogue-picker__btn--open"] : null
+        styles.button
     )
     const menuClassName = conClass(
         "dropdown-menu",
+        "x-dropdown-menu",
         isOpen ? "show" : null,
-        styles["catalogue-picker__menu"]
+        styles.menu
+    )
+    const itemClassName = conClass(
+        "dropdown-item",
+        "x-dropdown-item"
     )
     const isEnabled = (catalogueNames !== null && catalogueNames.length > 0)
     //Effects
@@ -78,7 +87,7 @@ const CataloguesPicker = () => {
                         catalogueNames.map((catalogueName, index) => (
                             <span
                                 key={index}
-                                className="dropdown-item"
+                                className={itemClassName}
                                 onClick={() => onCatalogueClick(catalogueName)}
                             >
                                 {catalogueName}

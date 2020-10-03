@@ -5,7 +5,7 @@ import AuthCheck from '../components/authCheck'
 import AppContainer from '../components/appContainer'
 import { useStore } from '../redux/store'
 import Head from 'next/head'
-import '../styles/theme.css'
+import '../styles/theme.scss'
 
 const DashboardApp = ({ Component, pageProps }) => {
     const store = useStore(pageProps.initialReduxState)

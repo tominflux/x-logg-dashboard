@@ -1,0 +1,38 @@
+
+
+
+/////////////
+//   ROOT  //
+/////////////
+
+.x-btn {
+    border-radius: 6pt;
+    padding: 6pt;
+}
+.x-btn--flat-bottom {
+    border-radius: 6pt 6pt 0pt 0pt;
+}
+
+
+
+/////////////
+// PRIMARY //
+/////////////
+
+.x-btn-primary {
+    background-color: rgba($primary, 1.0);
+    border: none;
+    box-shadow: 
+        0 1.3pt 2.3pt rgba($primary-dark, 0.7),    
+        0 1.3pt 1.6pt rgba($primary-dark, 0.3) inset,
+        0 -0.9pt 1.9pt rgba($primary-dark, 0.4) inset;  
+    color: rgba($primary-xdark, 0.66);
+    text-shadow: 0 0.3pt 1.3pt rgba(0, 0, 0, 0.3);
+}
+.x-btn-primary:hover {
+    background-color: mix($primary, $primary-dark, 88%);
+} 
+.x-btn-primary:active {
+    background-color: rgba($primary-dark, 1.0);
+    color: rgba(255, 255, 255, 0.8);
+}

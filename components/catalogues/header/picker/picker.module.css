@@ -1,18 +1,15 @@
 
-.catalogue-picker {
+.root {
     width: 100%;
     max-width: 330pt;
 }
 
-.catalogue-picker__btn {
+.button {
     width: 100%;
     text-align: left;
     padding: 9pt 15pt;
 }
-.catalogue-picker__btn--open {
-    border-radius: 6pt 6pt 0pt 0pt;
-}
 
-.catalogue-picker__menu {
+.menu {
     width: 100%;
 }

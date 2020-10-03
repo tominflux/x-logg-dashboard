@@ -1,0 +1,33 @@
+
+
+
+/////////////
+// COLOURS //
+/////////////
+
+$primary: #eff7ff;
+$primary-dark: #6486a8;
+$primary-xdark: #1f3953;
+$shadow-alpha: 0.33;
+
+
+
+/////////////
+//   TAGS  //
+/////////////
+
+a,
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+    outline: inherit;
+}
+
+
+
+//////////////
+//COMPONENTS//
+//////////////
+
+@import "btn";
+@import "dropdown";
