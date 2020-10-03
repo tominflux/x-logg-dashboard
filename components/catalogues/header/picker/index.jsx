@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { conClass } from '../../../../misc/className'
 import CATALOGUE_ACTIONS from '../../../../redux/actions/catalogue'
+import { BookHalf } from 'react-bootstrap-icons'
 import styles from './picker.module.css'
 
 const CataloguesPicker = () => {
@@ -45,7 +46,8 @@ const CataloguesPicker = () => {
     )
     const itemClassName = conClass(
         "dropdown-item",
-        "x-dropdown-item"
+        "x-dropdown-item",
+        styles.menuItem
     )
     const isEnabled = (catalogueNames !== null && catalogueNames.length > 0)
     //Effects
@@ -79,6 +81,7 @@ const CataloguesPicker = () => {
                 type="button"
                 disabled={!isEnabled}
             >
+                <BookHalf className={styles.icon} />
                 {selectedCatalogueName}
             </button>
             <div className={menuClassName}>

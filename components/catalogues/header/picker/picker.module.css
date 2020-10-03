@@ -10,6 +10,15 @@
     padding: 9pt 15pt;
 }
 
+.icon {
+    font-size: 16pt;
+    margin-right: 16pt;
+}
+
 .menu {
     width: 100%;
+}
+
+.menuItem {
+    padding: 6.6pt 22pt;
 }
