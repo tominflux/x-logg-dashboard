@@ -1,17 +1,18 @@
 import { combineReducers } from "redux";
-import Auth from './auth'
-import Catalogue from './catalogue'
-import { initialAuthState } from './auth'
-import { initialCatalogueState } from "./catalogue";
+import Auth, { initialAuthState } from './auth'
+import Catalogue, { initialCatalogueState } from './catalogue'
+import Collection, { initialCollectionState } from './collection'
 
 export const initialState = {
     Auth: { ...initialAuthState },
-    Catalogue: { ...initialCatalogueState }
+    Catalogue: { ...initialCatalogueState },
+    Collection: { ...initialCollectionState }
 }
 
 const compositeReducer = combineReducers({
     Auth,
     Catalogue,
+    Collection
 })
 
 export default compositeReducer
