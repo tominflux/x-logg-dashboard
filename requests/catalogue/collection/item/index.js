@@ -1,7 +1,7 @@
-import { validateResponse } from "../../../../../misc/requests"
+import { validateResponse } from "../../../../misc/requests"
 
 export const getItemsUrl = (catId, colId) => (
-    `/api/catalogue/${catId}/collections/${colId}/items`
+    `/api/catalogue/${catId}/collection/${colId}/items`
 )
 
 export const getItems = async (catId, colId) => {

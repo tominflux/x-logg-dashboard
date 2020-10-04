@@ -15,7 +15,7 @@ const Item = (state = initialItemState, action) => {
             return {
                 ...state,
                 parentCollectionId: collectionId,
-                fetchingItemNames: true
+                fetchingItems: true
             }
         }
         case ITEM_ACTION_TYPE.FETCH_ITEMS_FAILED: {
@@ -23,36 +23,36 @@ const Item = (state = initialItemState, action) => {
             return {
                 ...state,
                 parentCollectionId: null,
-                fetchingItemNames: false,
+                fetchingItems: false,
                 fetchError
             }
         }
         case ITEM_ACTION_TYPE.RECEIVE_ITEMS: {
-            const { itemNames } = action.payload
+            const { items } = action.payload
             return {
                 ...state,
-                fetchingItemNames: false,
-                itemNames
+                fetchingItems: false,
+                items
             }
         }
         case ITEM_ACTION_TYPE.SELECT_ITEM: {
-            const { itemName } = action.payload
-            if (state.itemNames === null) {
+            const { item } = action.payload
+            if (state.items === null) {
                 throw new Error(
                     "Cannot select item, no items have been received."
                 )
             }
             if (
-                itemName !== null &&
-                !state.itemNames.includes(itemName)
+                item !== null &&
+                !state.items.includes(item)
             ) {
                 throw new Error(
-                    `Cannot select item "${itemName}" as it does not exist.`
+                    `Cannot select item "${item}" as it does not exist.`
                 )
             }
             return {
                 ...state,
-                selectedItemName: itemName
+                selectedItem: item
             }
         }
         default: {

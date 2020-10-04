@@ -7,6 +7,8 @@ import CollectionAccordionCard from './card'
 const CollectionAccordion = () => {
     //Hooks 
     const {
+        fetchingCollectionNames,
+        fetchError,
         selectedCatalogueName: catalogueId,
     } = useSelector(state => state.Catalogue)
     const {
@@ -29,6 +31,7 @@ const CollectionAccordion = () => {
         collectionNames.map((collectionName, index) => (
             <CollectionAccordionCard
                 key={index}
+                catalogueId={parentCatalogueId}
                 collectionName={collectionName}
                 show={collectionName === selectedCollectionName}
                 onToggle={() => onToggle(collectionName)}
@@ -52,7 +55,11 @@ const CollectionAccordion = () => {
                 dispatch(fetchCollectionNamesFailed)
             }
         }
-        if (parentCatalogueId !== catalogueId)
+        if (
+            !fetchingCollectionNames &&
+            !fetchError &&
+            parentCatalogueId !== catalogueId
+        )
             retrieveCollectionNames()
     })
     //Render
