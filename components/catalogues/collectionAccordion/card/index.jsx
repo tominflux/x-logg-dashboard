@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { conClass } from '../../../../misc/className'
 
-const CollectionAccordionCard = ({ collectionName, show }) => {
+const CollectionAccordionCard = ({ collectionName, show, onToggle }) => {
     //Computations
     const cardClassName = conClass(
         "card",
@@ -19,15 +19,13 @@ const CollectionAccordionCard = ({ collectionName, show }) => {
     //Render
     return (
         <div className={cardClassName}>
-            <div className={headerClassName}>
+            <div className={headerClassName} onClick={() => onToggle()}>
                 <h5 className="mb-0">
-                    <button className="btn btn-link">
-                        {collectionName}
-                    </button>
+                    {collectionName}
                 </h5>
             </div>
             <div className={collapseClassName}>
-                <div className="card-body">
+                <div className="card-body x-accord__body">
                     Hello World.
                 </div>
             </div>
@@ -37,7 +35,8 @@ const CollectionAccordionCard = ({ collectionName, show }) => {
 
 CollectionAccordionCard.propTypes = {
     collectionName: PropTypes.string,
-    show: PropTypes.bool
+    show: PropTypes.bool,
+    onToggle: PropTypes.func
 }
 
 export default CollectionAccordionCard

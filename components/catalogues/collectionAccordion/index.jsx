@@ -7,22 +7,31 @@ import CollectionAccordionCard from './card'
 const CollectionAccordion = () => {
     //Hooks 
     const {
-        selectedCatalogueName: catalogueId
+        selectedCatalogueName: catalogueId,
     } = useSelector(state => state.Catalogue)
     const {
         //fetchingCollectionNames,
         parentCatalogueId,
         collectionNames,
-        //selectedCollectionName
+        selectedCollectionName
     } = useSelector(state => state.Collection)
     const dispatch = useDispatch()
+    //Events
+    const onToggle = (collectionName) => {
+        const toggledSelected = (collectionName === selectedCollectionName)
+        const nextCollection = toggledSelected ? null : collectionName
+        const selectCollection =
+            COLLECTION_ACTIONS.selectCollection(nextCollection)
+        dispatch(selectCollection)
+    }
     //Getters
     const getCards = () => collectionNames ?
         collectionNames.map((collectionName, index) => (
             <CollectionAccordionCard
                 key={index}
                 collectionName={collectionName}
-                show
+                show={collectionName === selectedCollectionName}
+                onToggle={() => onToggle(collectionName)}
             />
         )) : null
     //Effects

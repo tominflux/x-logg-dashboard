@@ -42,7 +42,10 @@ const Collection = (state = initialCollectionState, action) => {
                     "Cannot select collection, no collections have been received."
                 )
             }
-            if (!state.collectionNames.includes(collectionName)) {
+            if (
+                collectionName !== null &&
+                !state.collectionNames.includes(collectionName)
+            ) {
                 throw new Error(
                     `Cannot select collection "${collectionName}" as it does not exist.`
                 )
