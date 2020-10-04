@@ -5,6 +5,10 @@
 //   ROOT  //
 /////////////
 
+.x-glass-text {
+    color: rgba($primary-xdark, 0.66);
+    text-shadow: 0 0.3pt 1.3pt rgba(0, 0, 0, 0.3);
+}
 
 .__x-glass {
     border: none;
@@ -12,8 +16,7 @@
         0 1.3pt 2.3pt rgba($primary-dark, 0.7),    
         0 1.3pt 1.6pt rgba($primary-dark, 0.3) inset,
         0 -0.9pt 1.9pt rgba($primary-dark, 0.4) inset;  
-    color: rgba($primary-xdark, 0.66);
-    text-shadow: 0 0.3pt 1.3pt rgba(0, 0, 0, 0.3);
+        @extend .x-glass-text;
     border-radius: 6pt;
 }
 
@@ -29,8 +32,12 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-
 .x-glass-lite {
     @extend .__x-glass;
     background-color: none;
+}
+
+.x-glass__inner {
+    box-shadow: 
+        0 1.2pt 3.3pt rgba($primary-dark, 0.3) inset;
 }

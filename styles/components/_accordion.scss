@@ -7,11 +7,21 @@
 
 .x-accord {
     @extend .x-glass;
-    margin: 9pt 0;
+    margin: 12pt 0;
 }
 
 .x-accord__header {
+    padding: 14pt 36pt;
     background-color: unset;
+    @extend .x-glass-text;
     @extend .x-glass--int;
     border: 0;
+    border-radius: 6pt;
+    transition: background-color 0.15s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.x-accord__body {
+    @extend .x-glass__inner;
 }
