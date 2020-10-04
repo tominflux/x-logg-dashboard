@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { GridFill } from 'react-bootstrap-icons'
 import { conClass } from '../../../../misc/className'
+import styles from './card.module.css'
 
 const CollectionAccordionCard = ({ collectionName, show, onToggle }) => {
     //Computations
@@ -21,6 +23,7 @@ const CollectionAccordionCard = ({ collectionName, show, onToggle }) => {
         <div className={cardClassName}>
             <div className={headerClassName} onClick={() => onToggle()}>
                 <h5 className="mb-0">
+                    <GridFill className={styles.collectionIcon} />
                     {collectionName}
                 </h5>
             </div>
