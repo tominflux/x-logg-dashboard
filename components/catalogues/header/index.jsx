@@ -39,7 +39,7 @@ const CataloguesHeader = () => {
     //Render
     return (
         <header className="container-fluid mb-5">
-            <div className="row">
+            <div className="row align-items-center">
                 <nav className="col-7 text-center">
                     <CataloguePicker />
                 </nav>

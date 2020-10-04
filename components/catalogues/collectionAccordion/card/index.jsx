@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useSelector, useDispatch } from 'react-redux'
 import { GridFill } from 'react-bootstrap-icons'
 import { conClass } from '../../../../misc/className'
 import styles from './card.module.css'
