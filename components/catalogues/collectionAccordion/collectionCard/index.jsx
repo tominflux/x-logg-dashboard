@@ -6,6 +6,7 @@ import { conClass } from '../../../../misc/className'
 import styles from './card.module.css'
 import ITEM_ACTIONS from '../../../../redux/actions/item'
 import { getItems } from '../../../../requests/catalogue/collection/item'
+import ItemGrid from './itemGrid'
 
 const CollectionAccordionCard = ({ catalogueId, collectionName, show, onToggle }) => {
     const {
@@ -62,11 +63,7 @@ const CollectionAccordionCard = ({ catalogueId, collectionName, show, onToggle }
             </div>
             <div className={collapseClassName}>
                 <div className="card-body x-accord__body">
-                    {
-                        items ? items.map(
-                            (item, index) => <p key={index}>{item.identifier.data}</p>
-                        ) : null
-                    }
+                    <ItemGrid items={items} />
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import COLLECTION_ACTIONS from '../../../redux/actions/collection'
 import { getCollections } from '../../../requests/catalogue/collection'
-import CollectionAccordionCard from './card'
+import CollectionAccordionCard from './collectionCard'
 
 const CollectionAccordion = () => {
     //Hooks 

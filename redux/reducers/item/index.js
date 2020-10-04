@@ -15,7 +15,8 @@ const Item = (state = initialItemState, action) => {
             return {
                 ...state,
                 parentCollectionId: collectionId,
-                fetchingItems: true
+                fetchingItems: true,
+                items: []
             }
         }
         case ITEM_ACTION_TYPE.FETCH_ITEMS_FAILED: {
