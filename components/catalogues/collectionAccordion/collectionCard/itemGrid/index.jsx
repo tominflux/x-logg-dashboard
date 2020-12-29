@@ -50,7 +50,7 @@ const ItemGrid = ({ items }) => {
             (items, rowIndex) => renderRow(items, rowIndex)
         )
     }
-    //
+    //Render
     return (
         <div className="container-fluid">
             {renderRows()}
